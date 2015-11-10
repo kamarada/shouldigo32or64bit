@@ -12,7 +12,7 @@
     </General>
     <i18n>
       <EnableI18N Value="True"/>
-      <OutDir Value="locale"/>
+      <OutDir Value="languages"/>
     </i18n>
     <VersionInfo>
       <StringTable ProductVersion=""/>
@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="6">
+    <Units Count="7">
       <Unit0>
         <Filename Value="ShouldIGo32Or64Bit.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -61,6 +61,10 @@
         <Filename Value="ComputerInfo.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit5>
+      <Unit6>
+        <Filename Value="Localization.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit6>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

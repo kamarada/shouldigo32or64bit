@@ -5,7 +5,7 @@ unit OperatingSystem;
 interface
 
 uses
-  Classes, SysUtils{$IFDEF LINUX}, BaseUnix{$ENDIF};
+  Classes, SysUtils;
 
 type
   TOperatingSystem = class
@@ -20,10 +20,13 @@ type
 
 implementation
 
-{$IFDEF WINDOWS}
 uses
+  {$IFDEF WINDOWS}
   uWin32_ComputerSystem, uWin32_OperatingSystem;
-{$ENDIF}
+  {$ENDIF}
+  {$IFDEF LINUX}
+  BaseUnix;
+  {$ENDIF}
 
 constructor TOperatingSystem.Create();
 {$IFDEF LINUX}

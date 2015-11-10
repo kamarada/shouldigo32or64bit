@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
-  ExtCtrls, Buttons, LCLTranslator, ComputerInfo;
+  ExtCtrls, Buttons;
 
 type
 
@@ -42,6 +42,9 @@ var
 implementation
 
 {$R *.lfm}
+
+uses
+  ComputerInfo;
 
 { TFmMainScreen }
 
