@@ -1,0 +1,107 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: computerinfo.advicedefault
+msgid "You should use a system that matches your processor's architecture."
+msgstr ""
+
+#: computerinfo.adviceprocessor64ramenough
+msgid "Since your computer supports 64-bit operating systems and it has enough RAM (>= 2GB), you should use a 64-bit system."
+msgstr ""
+
+#: computerinfo.adviceprocessor64ramenoughsystem64
+msgid "At the moment, you are using a 64-bit system."
+msgstr ""
+
+#: computerinfo.adviceprocessor64ramlittlesystem32
+msgid "Your computer supports 64-bit operating systems, but it does not have much RAM (< 2GB). At the moment, you are using a 32-bit system. If its performance is good, you should use a 32-bit system."
+msgstr ""
+
+#: computerinfo.adviceprocessor64ramlittlesystem64
+msgid "Your computer supports 64-bit operating systems, but it does not have much RAM (< 2GB). At the moment, you are using a 64-bit system. If its performance is not satisfying, you should consider using a 32-bit system."
+msgstr ""
+
+#: computerinfo.advicesystem32processor32
+msgid "Your computer supports 32-bit operating systems only."
+msgstr ""
+
+#: computerinfo.operatingsystemarchitecture32bit
+msgid "32-bit"
+msgstr ""
+
+#: computerinfo.operatingsystemarchitecture64bit
+msgid "64-bit"
+msgstr ""
+
+#: computerinfo.operatingsystemarchitecturebit
+msgctxt "computerinfo.operatingsystemarchitecturebit"
+msgid "-bit"
+msgstr ""
+
+#: computerinfo.operatingsystemarchitectureunknown
+msgctxt "computerinfo.operatingsystemarchitectureunknown"
+msgid "Unknown"
+msgstr ""
+
+#: computerinfo.processorarchitecture32bit
+msgid "Legacy 32-bit PC"
+msgstr ""
+
+#: computerinfo.processorarchitecture64bit
+msgid "64-bit PC"
+msgstr ""
+
+#: computerinfo.processorarchitecturebit
+msgctxt "computerinfo.processorarchitecturebit"
+msgid "-bit"
+msgstr ""
+
+#: computerinfo.processorarchitectureunknown
+msgctxt "computerinfo.processorarchitectureunknown"
+msgid "Unknown"
+msgstr ""
+
+#: tfmmainscreen.bbclose.caption
+msgid "&Close"
+msgstr ""
+
+#: tfmmainscreen.caption
+msgid "Should I go 32 or 64-bit?"
+msgstr ""
+
+#: tfmmainscreen.gbadvice.caption
+msgid "Advice"
+msgstr ""
+
+#: tfmmainscreen.gbmemory.caption
+msgid "Memory"
+msgstr ""
+
+#: tfmmainscreen.gboperatingsystem.caption
+msgid "Operating system"
+msgstr ""
+
+#: tfmmainscreen.gbprocessor.caption
+msgid "Processor"
+msgstr ""
+
+#: tfmmainscreen.leoperatingsystemarchitecture.editlabel.caption
+msgid "System architecture"
+msgstr ""
+
+#: tfmmainscreen.leoperatingsystemproductname.editlabel.caption
+msgid "Product name"
+msgstr ""
+
+#: tfmmainscreen.leprocessorarchitecture.editlabel.caption
+msgid "Processor architecture"
+msgstr ""
+
+#: tfmmainscreen.leprocessormodel.editlabel.caption
+msgid "Processor model"
+msgstr ""
+
+#: tfmmainscreen.leram.editlabel.caption
+msgid "RAM"
+msgstr ""
+

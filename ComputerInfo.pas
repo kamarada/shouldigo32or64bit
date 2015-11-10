@@ -34,6 +34,33 @@ type
 
 implementation
 
+resourcestring
+  AdviceSystem32Processor32 = 'Your computer supports 32-bit operating ' +
+    'systems only.';
+  AdviceProcessor64RamEnough = 'Since your computer supports 64-bit ' +
+    'operating systems and it has enough RAM (>= 2GB), you should use a ' +
+    '64-bit system.';
+  AdviceProcessor64RamEnoughSystem64 = 'At the moment, you are using a ' +
+    '64-bit system.';
+  AdviceProcessor64RamLittleSystem32 = 'Your computer supports 64-bit ' +
+    'operating systems, but it does not have much RAM (< 2GB). At the ' +
+    'moment, you are using a 32-bit system. If its performance is good, you ' +
+    'should use a 32-bit system.';
+  AdviceProcessor64RamLittleSystem64 = 'Your computer supports 64-bit ' +
+    'operating systems, but it does not have much RAM (< 2GB). At the ' +
+    'moment, you are using a 64-bit system. If its performance is not ' +
+    'satisfying, you should consider using a 32-bit system.';
+  AdviceDefault = 'You should use a system that matches your processor''s ' +
+      'architecture.';
+  OperatingSystemArchitecture32bit = '32-bit';
+  OperatingSystemArchitecture64bit = '64-bit';
+  OperatingSystemArchitectureUnknown = 'Unknown';
+  OperatingSystemArchitectureBit = '-bit';
+  ProcessorArchitecture32bit = 'Legacy 32-bit PC';
+  ProcessorArchitecture64bit = '64-bit PC';
+  ProcessorArchitectureUnknown = 'Unknown';
+  ProcessorArchitectureBit = '-bit';
+
 constructor TComputerInfo.Create();
 begin
   FAdvice := '';
@@ -44,42 +71,36 @@ begin
     (FOperatingSystem.Architecture = 32) and
     (FProcessor.Architecture = 32)
   ) then
-    FAdvice := 'Your computer supports 32-bit operating systems only.'
+    FAdvice := AdviceSystem32Processor32
   else
     if (FProcessor.Architecture = 64) then
       if (FMemory.Ram >= 2147483648) then
       begin
-        FAdvice := 'Since your computer supports 64-bit operating systems ' +
-          'and it has enough RAM (>= 2GB), you should use a 64-bit system.';
+        FAdvice := AdviceProcessor64RamEnough;
         if (FOperatingSystem.Architecture = 64) then
-          FAdvice := FAdvice + ' At the moment, you are using a 64-bit system.'
+          FAdvice := FAdvice + ' ' + AdviceProcessor64RamEnoughSystem64
       end
       else
         if (FOperatingSystem.Architecture = 32) then
-          FAdvice := 'Your computer supports 64-bit operating systems, but ' +
-            'it does not have much RAM (< 2GB). At the moment, you are using ' +
-            'a 32-bit system. If its performance is good, you should use a ' +
-            '32-bit system.'
+          FAdvice := AdviceProcessor64RamLittleSystem32
         else
           if (FOperatingSystem.Architecture = 64) then
-            FAdvice := 'Your computer supports 64-bit operating systems, but ' +
-              'it does not have much RAM (< 2GB). At the moment, you are ' +
-              'using a 64-bit system. If its performance is not satisfying, ' +
-              'you should consider using a 32-bit system.';
+            FAdvice := AdviceProcessor64RamLittleSystem64;
   if (FAdvice = '') then
-    FAdvice := 'You should use a system that matches your processor''s ' +
-      'architecture.';
+    FAdvice := AdviceDefault;
 end;
 
 function TComputerInfo.GetOperatingSystemArchitecture(): String;
 begin
   case FOperatingSystem.Architecture of
     32:
-      Result := '32-bit';
+      Result := OperatingSystemArchitecture32bit;
     64:
-      Result := '64-bit';
+      Result := OperatingSystemArchitecture64bit;
     else
-      Result := 'Unknown (' + IntToStr(FOperatingSystem.Architecture) + '-bit)';
+      Result := OperatingSystemArchitectureUnknown + ' (' +
+        IntToStr(FOperatingSystem.Architecture) + OperatingSystemArchitectureBit
+        + ')';
   end;
 end;
 
@@ -92,11 +113,12 @@ function TComputerInfo.GetProcessorArchitecture(): String;
 begin
   case FProcessor.Architecture of
     32:
-      Result := 'Legacy 32-bit PC';
+      Result := ProcessorArchitecture32bit;
     64:
-      Result := '64-bit PC';
+      Result := ProcessorArchitecture64bit;
     else
-      Result := 'Unknown (' + IntToStr(FProcessor.Architecture) + '-bit)';
+      Result := ProcessorArchitectureUnknown + ' (' +
+        IntToStr(FProcessor.Architecture) + ProcessorArchitectureBit + ')';
   end;
 end;
 
