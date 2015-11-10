@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt\n"
+"X-Generator: Poedit 1.8.5\n"
+
+#: computerinfo.advicedefault
+msgid "You should use a system that matches your processor's architecture."
+msgstr "Você deve usar um sistema operacional com a mesma arquitetura do seu processador."
+
+#: computerinfo.adviceprocessor64ramenough
+msgid "Since your computer supports 64-bit operating systems and it has enough RAM (>= 2GB), you should use a 64-bit system."
+msgstr "Como seu computador suporta sistemas operacionais de 64 bits e dispõe de memória RAM suficiente (>= 2GB), você deve usar um sistema de 64 bits."
+
+#: computerinfo.adviceprocessor64ramenoughsystem64
+msgid "At the moment, you are using a 64-bit system."
+msgstr "No momento, você está usando um sistema de 64 bits."
+
+#: computerinfo.adviceprocessor64ramlittlesystem32
+msgid "Your computer supports 64-bit operating systems, but it does not have much RAM (< 2GB). At the moment, you are using a 32-bit system. If its performance is good, you should use a 32-bit system."
+msgstr "Seu computador suporta sistemas operacionais de 64 bits, mas ele não dispõe de memória RAM suficiente (< 2 GB). No momento, você está usando um sistema de 32 bits. Se o desempenho dele é bom, você deve usar um sistema de 32 bits."
+
+#: computerinfo.adviceprocessor64ramlittlesystem64
+msgid "Your computer supports 64-bit operating systems, but it does not have much RAM (< 2GB). At the moment, you are using a 64-bit system. If its performance is not satisfying, you should consider using a 32-bit system."
+msgstr "Seu computador suporta sistemas operacionais de 64 bits, mas ele não dispõe de memória RAM suficiente (< 2 GB). No momento, você está usando um sistema de 64 bits. Se o desempenho dele não é satisfatório, considere usar um sistema de 32 bits."
+
+#: computerinfo.advicesystem32processor32
+msgid "Your computer supports 32-bit operating systems only."
+msgstr "Seu computador suporta apenas sistemas operacionais de 32 bits."
+
+#: computerinfo.operatingsystemarchitecture32bit
+msgid "32-bit"
+msgstr "32 bits"
+
+#: computerinfo.operatingsystemarchitecture64bit
+msgid "64-bit"
+msgstr "64 bits"
+
+#: computerinfo.operatingsystemarchitecturebit
+msgctxt "computerinfo.operatingsystemarchitecturebit"
+msgid "-bit"
+msgstr "bits"
+
+#: computerinfo.operatingsystemarchitectureunknown
+msgctxt "computerinfo.operatingsystemarchitectureunknown"
+msgid "Unknown"
+msgstr "Não identificada"
+
+#: computerinfo.processorarchitecture32bit
+msgid "Legacy 32-bit PC"
+msgstr "PC de 32 bits (antigo)"
+
+#: computerinfo.processorarchitecture64bit
+msgid "64-bit PC"
+msgstr "PC de 64 bits"
+
+#: computerinfo.processorarchitecturebit
+msgctxt "computerinfo.processorarchitecturebit"
+msgid "-bit"
+msgstr "bits"
+
+#: computerinfo.processorarchitectureunknown
+msgctxt "computerinfo.processorarchitectureunknown"
+msgid "Unknown"
+msgstr "Não identificada"
+
+#: tfmmainscreen.bbclose.caption
+msgid "&Close"
+msgstr "&Fechar"
+
+#: tfmmainscreen.caption
+msgid "Should I go 32 or 64-bit?"
+msgstr "Qual devo usar: 32 ou 64 bits?"
+
+#: tfmmainscreen.gbadvice.caption
+msgid "Advice"
+msgstr "Conselho"
+
+#: tfmmainscreen.gbmemory.caption
+msgid "Memory"
+msgstr "Memória"
+
+#: tfmmainscreen.gboperatingsystem.caption
+msgid "Operating system"
+msgstr "Sistema operacional"
+
+#: tfmmainscreen.gbprocessor.caption
+msgid "Processor"
+msgstr "Processador"
+
+#: tfmmainscreen.leoperatingsystemarchitecture.editlabel.caption
+msgid "System architecture"
+msgstr "Arquitetura do sistema"
+
+#: tfmmainscreen.leoperatingsystemproductname.editlabel.caption
+msgid "Product name"
+msgstr "Nome do produto"
+
+#: tfmmainscreen.leprocessorarchitecture.editlabel.caption
+msgid "Processor architecture"
+msgstr "Arquitetura do processador"
+
+#: tfmmainscreen.leprocessormodel.editlabel.caption
+msgid "Processor model"
+msgstr "Modelo do processador"
+
+#: tfmmainscreen.leram.editlabel.caption
+msgid "RAM"
+msgstr "RAM"
