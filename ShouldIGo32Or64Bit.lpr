@@ -14,7 +14,7 @@ uses
 {$R *.res}
 
 begin
-  Application.Title:='Should I go 32 or 64-bit?';
+  Application.Title := 'Should I go 32 or 64-bit?';
   RequireDerivedFormResource := True;
   Application.Initialize;
   Application.CreateForm(TFmMainScreen, FmMainScreen);

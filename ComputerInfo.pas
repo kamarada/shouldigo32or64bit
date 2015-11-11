@@ -47,36 +47,36 @@ begin
     (FOperatingSystem.Architecture = 32) and
     (FProcessor.Architecture = 32)
   ) then
-    FAdvice := AdviceSystem32Processor32
+    FAdvice := Locale.AdviceSystem32Processor32
   else
     if (FProcessor.Architecture = 64) then
       if (FMemory.Ram >= 2147483648) then
       begin
-        FAdvice := AdviceProcessor64RamEnough;
+        FAdvice := Locale.AdviceProcessor64RamEnough;
         if (FOperatingSystem.Architecture = 64) then
-          FAdvice := FAdvice + ' ' + AdviceProcessor64RamEnoughSystem64
+          FAdvice := FAdvice + ' ' + Locale.AdviceProcessor64RamEnoughSystem64
       end
       else
         if (FOperatingSystem.Architecture = 32) then
-          FAdvice := AdviceProcessor64RamLittleSystem32
+          FAdvice := Locale.AdviceProcessor64RamLittleSystem32
         else
           if (FOperatingSystem.Architecture = 64) then
-            FAdvice := AdviceProcessor64RamLittleSystem64;
+            FAdvice := Locale.AdviceProcessor64RamLittleSystem64;
   if (FAdvice = '') then
-    FAdvice := AdviceDefault;
+    FAdvice := Locale.AdviceDefault;
 end;
 
 function TComputerInfo.GetOperatingSystemArchitecture(): String;
 begin
   case FOperatingSystem.Architecture of
     32:
-      Result := OperatingSystemArchitecture32bit;
+      Result := Locale.OperatingSystemArchitecture32bit;
     64:
-      Result := OperatingSystemArchitecture64bit;
+      Result := Locale.OperatingSystemArchitecture64bit;
     else
-      Result := OperatingSystemArchitectureUnknown + ' (' +
-        IntToStr(FOperatingSystem.Architecture) + OperatingSystemArchitectureBit
-        + ')';
+      Result := Locale.OperatingSystemArchitectureUnknown + ' (' +
+        IntToStr(FOperatingSystem.Architecture) +
+        Locale.OperatingSystemArchitectureBit + ')';
   end;
 end;
 
@@ -89,12 +89,13 @@ function TComputerInfo.GetProcessorArchitecture(): String;
 begin
   case FProcessor.Architecture of
     32:
-      Result := ProcessorArchitecture32bit;
+      Result := Locale.ProcessorArchitecture32bit;
     64:
-      Result := ProcessorArchitecture64bit;
+      Result := Locale.ProcessorArchitecture64bit;
     else
-      Result := ProcessorArchitectureUnknown + ' (' +
-        IntToStr(FProcessor.Architecture) + ProcessorArchitectureBit + ')';
+      Result := Locale.ProcessorArchitectureUnknown + ' (' +
+        IntToStr(FProcessor.Architecture) + Locale.ProcessorArchitectureBit +
+        ')';
   end;
 end;
 

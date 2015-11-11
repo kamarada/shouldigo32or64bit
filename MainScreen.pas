@@ -30,6 +30,8 @@ type
     MeAdvice: TMemo;
     procedure BbCloseClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure LoadComputerInfo();
+    procedure TranslateInterface();
   private
     { private declarations }
   public
@@ -44,11 +46,22 @@ implementation
 {$R *.lfm}
 
 uses
-  ComputerInfo;
+  Localization, ComputerInfo;
 
 { TFmMainScreen }
 
+procedure TFmMainScreen.BbCloseClick(Sender: TObject);
+begin
+  Close();
+end;
+
 procedure TFmMainScreen.FormCreate(Sender: TObject);
+begin
+  TranslateInterface();
+  LoadComputerInfo();
+end;
+
+procedure TFmMainScreen.LoadComputerInfo();
 var
   ComputerInfo: TComputerInfo;
 begin
@@ -63,9 +76,20 @@ begin
   MeAdvice.Lines.Add(ComputerInfo.Advice);
 end;
 
-procedure TFmMainScreen.BbCloseClick(Sender: TObject);
+procedure TFmMainScreen.TranslateInterface();
 begin
-  Close();
+  Application.Title := Locale.FmMainScreen;
+  Caption := Locale.FmMainScreen;
+  GbProcessor.Caption := Locale.GbProcessor;
+  LeProcessorModel.EditLabel.Caption := Locale.LeProcessorModel;
+  LeProcessorArchitecture.EditLabel.Caption := Locale.LeProcessorArchitecture;
+  GbMemory.Caption := Locale.GbMemory;
+  LeRam.EditLabel.Caption := Locale.LeRam;
+  GbOperatingSystem.Caption := Locale.GbOperatingSystem;
+  LeOperatingSystemArchitecture.EditLabel.Caption := Locale.LeOperatingSystemArchitecture;
+  LeOperatingSystemProductName.EditLabel.Caption := Locale.LeOperatingSystemProductName;
+  GbAdvice.Caption := Locale.GbAdvice;
+  BbClose.Caption := Locale.BbClose;
 end;
 
 end.
